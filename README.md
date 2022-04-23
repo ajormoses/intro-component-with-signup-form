@@ -16,7 +16,7 @@ Thanks for checking out this front-end coding challenge.
   My name is Ajor Moses, I'm open to learning and improvement, Thanks for checking out my front-end coding challenge.
 
 - [Links](#links)
-- Solution URL: [ https://github.com/intro-component-with-signup-form.git ]
+- Solution URL: [ https://github.com/ajormoses/intro-component-with-signup-form.git ]
 - Live Site URL: [ https://ajormoses.github.io/intro-component-with-signup-form/ ]
 
 - [Built with](#built-with)
