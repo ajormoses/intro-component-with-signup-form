@@ -4,6 +4,7 @@ const lastName = document.querySelector("#lastName");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const btn = document.querySelector(".free-trial-btn");
+var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
 btn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -12,28 +13,35 @@ btn.addEventListener("click", (e) => {
   if (firstName.value.trim() == "") {
     error(firstName, "first name can not be empty");
   } else {
-    success(firstName);
+    success(firstName, "");
   }
 
   //   last name validation
   if (lastName.value.trim() == "") {
     error(lastName, "last name can not be empty");
   } else {
-    success(lastName);
+    success(lastName, "");
   }
 
   //   Password validation
   if (password.value.trim() == "") {
     error(password, "Password can not be empty");
   } else {
-    success(password);
+    success(password, "");
   }
 
   //   Email validation
   if (email.value.trim() == "") {
     err(email, "looks like this is not an email");
   } else {
-    success(email);
+    success(email, "");
+  }
+
+  //  Email pattern validation
+  if (email.value.match(pattern)) {
+    success(email, "");
+  } else {
+    err(email, "looks like this is not an email");
   }
 });
 
@@ -49,7 +57,7 @@ function error(element, msg) {
   p.style.color = "hsl(0, 100%, 74%)";
 }
 
-function success(element) {
+function success(element, msg) {
   element.style.border = "3px hsl(154, 59%, 51%) solid";
 }
 
